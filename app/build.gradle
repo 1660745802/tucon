@@ -39,6 +39,9 @@ android {
     viewBinding {
         enabled = true
     }
+    lintOptions {
+        baseline(file("lint-baseline.xml"))
+    }
 }
 
 dependencies {
