@@ -13,7 +13,7 @@ data class MyPicture(
 //    val error: String,
 //    val data: List<PictureIntent>
 //) {
-//    val imgSrcUrl: String get() = data[0].urls.original
+//    val imgSrcUrl: String get() = data[0].urls.original.replace("https://i.pixiv.cat/", "https://api.pixiv.moe/image/i.pximg.net/")
 //}
 //
 //data class PictureIntent(
