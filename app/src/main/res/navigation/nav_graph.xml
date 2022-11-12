@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/imageListFragment">
+
+    <fragment
+        android:id="@+id/imageListFragment"
+        android:name="com.example.tucon.ui.imagelist.ImageListFragment"
+        android:label="主页"
+        tools:layout="@layout/fragment_image_list" >
+        <action
+            android:id="@+id/action_imageListFragment_to_singleImageFragment"
+            app:destination="@id/singleImageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/singleImageFragment"
+        android:name="com.example.tucon.ui.singleimage.SingleImageFragment"
+        android:label="图片"
+        tools:layout="@layout/fragment_single_image" >
+        <argument
+            android:name="imgUrl"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteImageFragment"
+        android:name="com.example.tucon.ui.favoriteimage.FavoriteImageFragment"
+        android:label="收藏"
+        tools:layout="@layout/fragment_favorite_image" >
+        <action
+            android:id="@+id/action_favoriteImageFragment_to_singleImageFragment"
+            app:destination="@id/singleImageFragment" />
+    </fragment>
+    <fragment android:id="@+id/settingPageFragment"
+        android:name="com.example.tucon.ui.settings.SettingPageFragment"
+        android:label="设置"
+        tools:layout="@layout/fragment_setting_page"/>
+</navigation>
